@@ -1,0 +1,6 @@
+{
+  "name": "Houndstooth Tattoo | Las Vegas Custom Tattoo & Piercing",
+  "description": "Veteran-owned custom tattoo and piercing studio located at 4045 S Buffalo Dr, Las Vegas, Nevada. Bespoke tattoo artistry, black & grey realism, sacred geometry, fine-line, and hospital-grade piercing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

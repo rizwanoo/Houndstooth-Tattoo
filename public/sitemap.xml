@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://ais-pre-7bj7szzaoa5zo7zkqr6cip-508577894332.asia-southeast1.run.app/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ais-pre-7bj7szzaoa5zo7zkqr6cip-508577894332.asia-southeast1.run.app/assets/images/logo.jpg</image:loc>
+      <image:title>Houndstooth Tattoo Official Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://ais-pre-7bj7szzaoa5zo7zkqr6cip-508577894332.asia-southeast1.run.app/assets/images/studio_interior_1.jpg</image:loc>
+      <image:title>Houndstooth Tattoo Las Vegas Studio Interior</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ais-pre-7bj7szzaoa5zo7zkqr6cip-508577894332.asia-southeast1.run.app/artists</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-7bj7szzaoa5zo7zkqr6cip-508577894332.asia-southeast1.run.app/portfolio</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://ais-pre-7bj7szzaoa5zo7zkqr6cip-508577894332.asia-southeast1.run.app/booking</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>

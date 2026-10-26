@@ -1,0 +1,6 @@
+# Robots.txt for Houndstooth Tattoo Las Vegas
+User-agent: *
+Allow: /
+
+# Canonical XML Sitemap
+Sitemap: https://ais-pre-7bj7szzaoa5zo7zkqr6cip-508577894332.asia-southeast1.run.app/sitemap.xml
