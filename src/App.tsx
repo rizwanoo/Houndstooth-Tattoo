@@ -16,6 +16,7 @@ import BookingSection from './components/BookingSection';
 import Footer from './components/Footer';
 import LightboxModal from './components/LightboxModal';
 import FiligreeDivider from './components/FiligreeDivider';
+import StudioAIChatbot from './components/StudioAIChatbot';
 import { PORTFOLIO_ITEMS, PortfolioItem, STUDIO_INFO } from './data/studioData';
 import { ArrowLeft, Sparkles, MapPin, Shield } from 'lucide-react';
 
@@ -124,22 +125,22 @@ export default function App() {
               <div className="bg-neutral-950 border border-neutral-800 p-8 sm:p-12 text-center relative overflow-hidden shadow-2xl">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#00d2b2]/5 rounded-full blur-3xl pointer-events-none" />
                 <FiligreeDivider
-                  title="OUR RESIDENT ARTISTS & PIERCERS"
-                  subtitle="Master Craftsmen of Las Vegas"
+                  title="THE TATTOO ARTIST"
+                  subtitle="Ralph Con · Tattoo Artist Since 2005"
                   className="mb-4"
                 />
                 <p className="text-sm sm:text-base text-neutral-300 max-w-3xl mx-auto leading-relaxed">
-                  Houndstooth Tattoo is home to an elite collective of tattooers. Every artist brings a dedicated focus to custom composition, anatomical fit, and medical-grade precision. Explore individual portfolios and book your session directly with your preferred artist.
+                  Ralph Con has been creating bespoke custom body artistry since 2005. Specializing in Realism, Black & Grey, Dark Side, and Ornamental tattooing, every piece combines technical mastery with anatomical composition.
                 </p>
                 <div className="flex flex-wrap items-center justify-center gap-6 mt-6 text-xs text-neutral-400 font-mono">
                   <span className="flex items-center gap-1.5">
                     <Shield className="w-3.5 h-3.5 text-[#00d2b2]" />
-                    Veteran-Owned Studio
+                    Tattoo Artist Since 2005
                   </span>
                   <span>·</span>
                   <span className="flex items-center gap-1.5">
                     <MapPin className="w-3.5 h-3.5 text-[#00d2b2]" />
-                    4045 S Buffalo Dr, Las Vegas NV
+                    London, Ontario, Canada
                   </span>
                 </div>
               </div>
@@ -171,11 +172,11 @@ export default function App() {
                 <div className="absolute top-0 left-0 w-64 h-64 bg-[#00d2b2]/5 rounded-full blur-3xl pointer-events-none" />
                 <FiligreeDivider
                   title="AUTHENTIC TATTOO PORTFOLIO"
-                  subtitle="Selected Body Artistry & Client Pieces"
+                  subtitle="Selected Tattoo Artistry by Ralph Con"
                   className="mb-4"
                 />
                 <p className="text-sm sm:text-base text-neutral-300 max-w-3xl mx-auto leading-relaxed">
-                  Browse real, unedited photographs of tattoos completed by Houndstooth Tattoo artists. Filter by style or click on any piece to inspect details and request a consultation with the artist.
+                  Browse real, unedited photographs of tattoos completed by Ralph Con. Filter by style or click on any piece to inspect details and request a consultation.
                 </p>
               </div>
             </div>
@@ -204,8 +205,8 @@ export default function App() {
 
               <div className="bg-neutral-950 border border-neutral-800 p-8 sm:p-12 text-center relative overflow-hidden shadow-2xl">
                 <FiligreeDivider
-                  title="CONTACT & CONSULTATION"
-                  subtitle="Houndstooth Tattoo · Las Vegas, NV"
+                  title="BOOKING & CONSULTATION"
+                  subtitle="Ralph Con Tattoo · London, Ontario, Canada"
                   className="mb-4"
                 />
                 <p className="text-sm sm:text-base text-neutral-300 max-w-3xl mx-auto leading-relaxed">
@@ -252,6 +253,9 @@ export default function App() {
           handleBookClick(artistHandle);
         }}
       />
+
+      {/* AI Consultation Chatbot Concierge */}
+      <StudioAIChatbot onBookClick={() => handleBookClick()} />
     </div>
   );
 }

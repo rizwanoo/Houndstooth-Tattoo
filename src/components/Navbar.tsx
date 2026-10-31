@@ -66,7 +66,7 @@ export default function Navbar({
             </button>
             <button
               onClick={() => handleNavClick('home', 'about')}
-              className="text-neutral-300 hover:text-[#00d2b2] transition-colors"
+              className="text-neutral-300 hover:text-[#00d2b2] transition-colors cursor-pointer"
             >
               About
             </button>
@@ -80,26 +80,26 @@ export default function Navbar({
             </button>
           </nav>
 
-          {/* Center Brand Zone: Official Houndstooth Logo Emblem */}
+          {/* Center Brand Zone: Official Ralph Con Logo Emblem */}
           <button
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-3 group focus:outline-none"
-            aria-label="Houndstooth Tattoo Home"
+            className="flex items-center gap-3 group focus:outline-none cursor-pointer"
+            aria-label="Ralph Con Tattoo Home"
           >
-            <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-[#00d2b2]/80 shadow-[0_0_15px_rgba(0,210,178,0.3)] group-hover:border-[#00d2b2] group-hover:scale-105 transition-all duration-300 bg-black">
+            <div className="relative w-11 h-11 sm:w-13 sm:h-13 rounded-full overflow-hidden border-2 border-[#00d2b2]/80 shadow-[0_0_15px_rgba(0,210,178,0.3)] group-hover:border-[#00d2b2] group-hover:scale-105 transition-all duration-300 bg-black">
               <img
                 src={STUDIO_INFO.logo}
-                alt="Houndstooth Tattoo Logo"
-                className="w-full h-full object-cover filter contrast-125"
+                alt="Ralph Con Logo"
+                className="w-full h-full object-cover filter contrast-110"
                 referrerPolicy="no-referrer"
               />
             </div>
             <div className="flex flex-col text-left">
               <span className="font-heading text-lg sm:text-xl font-bold tracking-wider text-white uppercase group-hover:text-[#00d2b2] transition-colors leading-tight">
-                Houndstooth
+                Ralph Con
               </span>
               <span className="text-[10px] uppercase tracking-widest text-[#00d2b2] font-medium leading-none">
-                Tattoo · Las Vegas
+                Tattoo · London, ON
               </span>
             </div>
           </button>
@@ -108,7 +108,7 @@ export default function Navbar({
           <div className="hidden lg:flex items-center gap-8 text-xs uppercase tracking-widest font-heading">
             <button
               onClick={() => handleNavClick('home', 'process')}
-              className="text-neutral-300 hover:text-[#00d2b2] transition-colors"
+              className="text-neutral-300 hover:text-[#00d2b2] transition-colors cursor-pointer"
             >
               The Process
             </button>
@@ -118,19 +118,19 @@ export default function Navbar({
                 currentPage === 'artists' ? 'text-[#00d2b2] font-semibold' : 'text-neutral-300'
               }`}
             >
-              Artists
+              Artist Bio
             </button>
             <button
               onClick={() => handleNavClick('home', 'faq')}
-              className="text-neutral-300 hover:text-[#00d2b2] transition-colors"
+              className="text-neutral-300 hover:text-[#00d2b2] transition-colors cursor-pointer"
             >
               FAQ
             </button>
             
-            {/* Primary Action Button (Matches Reference 'BOOK NOW!') */}
+            {/* Primary Action Button */}
             <button
               onClick={() => handleNavClick('booking')}
-              className="px-5 py-2.5 bg-[#00d2b2] hover:bg-[#00e8c4] text-neutral-950 font-heading font-bold text-xs uppercase tracking-wider rounded-none shadow-[0_0_15px_rgba(0,210,178,0.4)] hover:shadow-[0_0_20px_rgba(0,210,178,0.6)] transition-all duration-200 transform hover:-translate-y-0.5"
+              className="px-5 py-2.5 bg-[#00d2b2] hover:bg-[#00e8c4] text-neutral-950 font-heading font-bold text-xs uppercase tracking-wider rounded-none shadow-[0_0_15px_rgba(0,210,178,0.4)] hover:shadow-[0_0_20px_rgba(0,210,178,0.6)] transition-all duration-200 transform hover:-translate-y-0.5 cursor-pointer"
             >
               Book Now!
             </button>
@@ -140,13 +140,13 @@ export default function Navbar({
           <div className="flex lg:hidden items-center gap-3">
             <button
               onClick={() => handleNavClick('booking')}
-              className="px-3.5 py-1.5 bg-[#00d2b2] text-neutral-950 font-heading font-bold text-xs uppercase tracking-wider shadow-sm"
+              className="px-3.5 py-1.5 bg-[#00d2b2] text-neutral-950 font-heading font-bold text-xs uppercase tracking-wider shadow-sm cursor-pointer"
             >
               Book Now
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-neutral-300 hover:text-white focus:outline-none"
+              className="p-2 text-neutral-300 hover:text-white focus:outline-none cursor-pointer"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6 text-[#00d2b2]" /> : <Menu className="w-6 h-6" />}
@@ -172,7 +172,7 @@ export default function Navbar({
               onClick={() => handleNavClick('home', 'about')}
               className="text-left py-2 border-b border-neutral-900 text-neutral-300"
             >
-              About Studio
+              About Ralph Con
             </button>
             <button
               onClick={() => handleNavClick('portfolio')}
@@ -188,7 +188,7 @@ export default function Navbar({
                 currentPage === 'artists' ? 'text-[#00d2b2] font-bold' : 'text-neutral-300'
               }`}
             >
-              Resident Artists
+              Artist Profile
             </button>
             <button
               onClick={() => handleNavClick('home', 'process')}
@@ -204,19 +204,19 @@ export default function Navbar({
             </button>
             <button
               onClick={() => handleNavClick('booking')}
-              className="w-full mt-2 py-3 bg-[#00d2b2] text-neutral-950 font-bold text-center uppercase tracking-wider"
+              className="w-full mt-2 py-3 bg-[#00d2b2] text-neutral-950 font-bold text-center uppercase tracking-wider cursor-pointer"
             >
-              Book an Appointment
+              Book Consultation
             </button>
             
             <div className="pt-4 text-xs text-neutral-400 flex flex-col gap-1.5 normal-case">
               <div className="flex items-center gap-2 text-neutral-300 font-medium">
                 <MapPin className="w-3.5 h-3.5 text-[#00d2b2]" />
-                <span>4045 S Buffalo Dr, A109, Las Vegas NV</span>
+                <span>London, Ontario, Canada</span>
               </div>
               <div className="flex items-center gap-2 text-neutral-400">
                 <Shield className="w-3.5 h-3.5 text-[#00d2b2]" />
-                <span>Veteran-Owned Custom Studio</span>
+                <span>Tattoo Artist Since 2005</span>
               </div>
             </div>
           </nav>

@@ -1,6 +1,6 @@
 import React from 'react';
 import FiligreeDivider from './FiligreeDivider';
-import { Shield, Sparkles, CheckCircle2, MapPin } from 'lucide-react';
+import { Shield, CheckCircle2, MapPin, Award } from 'lucide-react';
 import { STUDIO_INFO } from '../data/studioData';
 
 interface AboutSectionProps {
@@ -25,72 +25,72 @@ export default function AboutSection({ onBookClick }: AboutSectionProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Left Column: Official HD Studio Photo */}
+          {/* Left Column: Official Shop Photograph */}
           <div className="lg:col-span-6 relative">
             <div className="relative shadow-2xl overflow-hidden border-8 border-white bg-black group">
-              <div className="aspect-[4/3] sm:aspect-[16/11] overflow-hidden">
+              <div className="aspect-[4/5] sm:aspect-[4/5] max-h-[550px] overflow-hidden">
                 <img
                   src={STUDIO_INFO.interiorPhoto}
-                  alt="Houndstooth Tattoo Official Las Vegas Studio Interior"
-                  className="w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition-transform duration-700"
+                  alt="Ralph Con Tattoo Shop in London Ontario"
+                  className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />
               </div>
 
-              {/* Verified Studio Tag Overlay */}
+              {/* Official Shop Tag Overlay */}
               <div className="absolute bottom-0 left-0 right-0 bg-neutral-950/90 text-white p-4 backdrop-blur-sm flex items-center justify-between border-t border-neutral-800">
                 <div className="flex items-center gap-2">
-                  <Shield className="w-4 h-4 text-[#00d2b2]" />
+                  <Award className="w-4 h-4 text-[#00d2b2]" />
                   <span className="font-heading uppercase tracking-wider text-xs font-semibold">
-                    Veteran-Owned & Operated
+                    Ralph Con Tattoo Studio
                   </span>
                 </div>
                 <div className="flex items-center gap-1.5 text-xs text-neutral-400 font-mono">
                   <MapPin className="w-3.5 h-3.5 text-[#00d2b2]" />
-                  <span>4045 S Buffalo Dr, Las Vegas</span>
+                  <span>London, ON, Canada</span>
                 </div>
               </div>
             </div>
 
-            {/* Subtle offset grunge frame */}
+            {/* Offset grunge frame */}
             <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-neutral-300 -z-10 pointer-events-none hidden sm:block" />
           </div>
 
-          {/* Right Column: Editorial Copy strictly matching reference hierarchy */}
+          {/* Right Column: Editorial Copy */}
           <div className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
             
             <FiligreeDivider
-              title="ABOUT HOUNDSTOOTH TATTOO STUDIO"
-              subtitle="Veteran-Owned Custom Craft"
+              title="ABOUT RALPH CON"
+              subtitle="Tattoo Artist Since 2005"
               light={true}
               className="lg:items-start lg:text-left"
             />
 
             <p className="text-neutral-700 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
-              Houndstooth Tattoo is a premier veteran-owned tattoo and piercing studio located at <strong>4045 S Buffalo Dr, Las Vegas</strong>. We are dedicated to creating custom tattoos that embody your individuality and personal journey. Alongside our verified resident artists, we bring unmatched precision, creativity, and hospital-grade sterility to every session.
+              <strong>Ralph Con</strong> is a master tattoo artist based in <strong>London, Ontario, Canada</strong>, with professional tattooing experience dating back to 2005. Dedicated to creating bespoke body art that lives beneath the skin, Ralph combines technical precision with a distinct artistic vision.
             </p>
 
             <p className="text-neutral-600 text-sm sm:text-base leading-relaxed max-w-xl">
-              From sacred geometry, intricate mandalas, and fine line to deep-contrast black & gray realism and custom script, each piece is engineered to fit your body’s natural contours. Your skin is our canvas — and every piece is crafted to endure.
+              Specializing in <strong>Realism, Black & Grey, Dark Side, and Ornamental</strong> tattoo artistry, every piece is custom designed to flow seamlessly with your body's natural anatomy and endure with time.
             </p>
 
             {/* Key Quality Pillars */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2 w-full max-w-lg text-left">
               <div className="flex items-center gap-2.5 text-xs text-neutral-800 font-medium">
                 <CheckCircle2 className="w-4 h-4 text-[#00a88f] shrink-0" />
-                <span>100% Single-Use Sterile Cartridges</span>
+                <span>Custom Realism & Dark Artistry</span>
               </div>
               <div className="flex items-center gap-2.5 text-xs text-neutral-800 font-medium">
                 <CheckCircle2 className="w-4 h-4 text-[#00a88f] shrink-0" />
-                <span>Dedicated Custom Consultations</span>
+                <span>Ornamental & Black & Grey Flow</span>
               </div>
               <div className="flex items-center gap-2.5 text-xs text-neutral-800 font-medium">
                 <CheckCircle2 className="w-4 h-4 text-[#00a88f] shrink-0" />
-                <span>Hospital-Grade Autoclave Sterilization</span>
+                <span>Hospital-Grade Sterility Standards</span>
               </div>
               <div className="flex items-center gap-2.5 text-xs text-neutral-800 font-medium">
                 <CheckCircle2 className="w-4 h-4 text-[#00a88f] shrink-0" />
-                <span>Vegan & Premium Pigment Formulations</span>
+                <span>London, Ontario Private Studio</span>
               </div>
             </div>
 

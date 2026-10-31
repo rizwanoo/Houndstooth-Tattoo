@@ -111,8 +111,8 @@ export default function LightboxModal({
 
             {/* Artist Box */}
             <div className="mt-6 p-4 bg-neutral-900/70 border border-neutral-800 space-y-2">
-              <span className="text-[10px] uppercase tracking-widest text-neutral-400 font-heading block font-semibold">
-                Created by Resident Artist
+              <span className="text-[10px] uppercase tracking-widest text-[#00d2b2] font-heading block font-semibold">
+                Custom Artistry by Ralph Con · Since 2005
               </span>
               <div className="flex items-center justify-between">
                 <div>
@@ -120,7 +120,7 @@ export default function LightboxModal({
                     {piece.artistName}
                   </span>
                   <a
-                    href={artistInfo?.instagram || `https://www.instagram.com/${piece.artistHandle.replace('@', '')}/`}
+                    href={artistInfo?.instagram || `https://www.instagram.com/ralcontattoo/`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs text-[#00d2b2] hover:text-[#00e8c4] flex items-center gap-1 font-mono transition-colors"
@@ -155,7 +155,7 @@ export default function LightboxModal({
               className="w-full py-3 bg-[#00d2b2] hover:bg-[#00e8c4] text-neutral-950 font-heading font-bold text-xs uppercase tracking-wider shadow-[0_0_15px_rgba(0,210,178,0.35)] transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <Calendar className="w-4 h-4" />
-              <span>Book In With {piece.artistName}</span>
+              <span>Book Consultation for This Style</span>
             </button>
           </div>
         </div>

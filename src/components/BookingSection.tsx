@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import FiligreeDivider from './FiligreeDivider';
 import { STUDIO_INFO, ARTISTS } from '../data/studioData';
-import { MapPin, Clock, Shield, Upload, CheckCircle2, AlertCircle, Compass, Instagram, Facebook } from 'lucide-react';
+import { MapPin, Clock, Shield, Upload, CheckCircle2, AlertCircle, Compass, Instagram, Mail, AtSign } from 'lucide-react';
 
 interface BookingSectionProps {
   preselectedArtist?: string;
@@ -17,7 +17,7 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
     style: '',
     preferredDate: '',
     budget: '',
-    artist: preselectedArtist || '',
+    artist: '@ralcontattoo',
     description: '',
   });
 
@@ -61,7 +61,6 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
     }
 
     setIsSubmitting(true);
-    // Simulate real submission handling
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitStatus('success');
@@ -78,15 +77,15 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
         
         {/* Section Heading */}
         <FiligreeDivider
-          title="START YOUR CUSTOM INQUIRY"
-          subtitle="Consultation & Booking"
+          title="START YOUR CONSULTATION"
+          subtitle="Ralph Con · Tattoo Artist Since 2005"
           className="mb-14"
         />
 
-        {/* Dual-Card Split Layout strictly matching reference design */}
+        {/* Dual-Card Split Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch max-w-6xl mx-auto">
           
-          {/* Left Card: Dark Info Card with Studio Credentials & Map */}
+          {/* Left Card: Info Card with Studio Credentials & Contact */}
           <div className="lg:col-span-5 bg-neutral-950 border-2 border-neutral-800 p-6 sm:p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden">
             
             {/* Top Filigree Crown */}
@@ -102,10 +101,10 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
               </h3>
 
               <p className="text-xs sm:text-sm text-neutral-300 text-center mt-3 leading-relaxed font-normal">
-                Please fill out the form with as much detail as possible. This helps us understand your vision, estimate the session duration, and pair you with the best resident artist.
+                Please fill out the form with your tattoo concept details. Ralph Con will review your design idea, placement, and reference photos to prepare your custom session.
               </p>
 
-              {/* Studio Key Facts Strip */}
+              {/* Key Contact Details */}
               <div className="my-8 space-y-5 border-t border-b border-neutral-800/80 py-6">
                 
                 {/* Location */}
@@ -115,46 +114,46 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
                   </div>
                   <div>
                     <span className="text-[11px] font-heading uppercase tracking-widest text-neutral-400 block font-semibold">
-                      Location & Address
+                      Location
                     </span>
                     <span className="text-sm font-semibold text-white block">
-                      {STUDIO_INFO.address}
+                      London, Ontario, Canada
                     </span>
                   </div>
                 </div>
 
-                {/* Opening Hours */}
+                {/* Email Direct */}
                 <div className="flex items-start gap-3.5">
                   <div className="w-9 h-9 rounded-none border border-[#00d2b2]/40 bg-[#00d2b2]/10 flex items-center justify-center text-[#00d2b2] shrink-0 mt-0.5">
-                    <Clock className="w-4 h-4" />
+                    <Mail className="w-4 h-4" />
                   </div>
                   <div>
                     <span className="text-[11px] font-heading uppercase tracking-widest text-neutral-400 block font-semibold">
-                      Studio Hours
+                      Direct Email
                     </span>
-                    <span className="text-sm font-semibold text-white block">
-                      Tue – Sat: 12:00 PM – 8:00 PM
-                    </span>
-                    <span className="text-xs text-neutral-400 block">
-                      Appointments & Walk-ins welcome
-                    </span>
+                    <a
+                      href="mailto:Ralphcon.2020@gmail.com"
+                      className="text-sm font-semibold text-[#00d2b2] hover:underline block"
+                    >
+                      Ralphcon.2020@gmail.com
+                    </a>
                   </div>
                 </div>
 
-                {/* Veteran Owned Badge */}
+                {/* Experience */}
                 <div className="flex items-start gap-3.5">
                   <div className="w-9 h-9 rounded-none border border-[#00d2b2]/40 bg-[#00d2b2]/10 flex items-center justify-center text-[#00d2b2] shrink-0 mt-0.5">
                     <Shield className="w-4 h-4" />
                   </div>
                   <div>
                     <span className="text-[11px] font-heading uppercase tracking-widest text-neutral-400 block font-semibold">
-                      Shop Credentials
+                      Experience
                     </span>
                     <span className="text-sm font-semibold text-white block">
-                      Veteran-Owned Custom Studio
+                      Tattoo Artist Since 2005
                     </span>
                     <span className="text-xs text-neutral-400 block">
-                      Hospital-grade autoclave sterilization
+                      Realism, Black & Grey, Dark Side & Ornamental
                     </span>
                   </div>
                 </div>
@@ -162,12 +161,12 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
               </div>
             </div>
 
-            {/* Stylized Interactive Map Frame (matching the map inside the card in the reference screenshot) */}
+            {/* Map Frame */}
             <div className="mt-auto">
               <div className="relative border border-neutral-800 overflow-hidden bg-neutral-900 group">
                 <iframe
-                  title="Houndstooth Tattoo Location Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.2801962304917!2d-115.26322872343943!3d36.11585860558117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c73104680879%3A0xe54146a297746401!2s4045%20S%20Buffalo%20Dr%2C%20Las%20Vegas%2C%20NV%2089147!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
+                  title="London Ontario Location Map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d186638.1633596956!2d-81.3831818296238!3d42.98492330887304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882ef20ea88d9b0b%3A0x28f7d7c93ac60f22!2sLondon%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
                   width="100%"
                   height="160"
                   style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) contrast(110%)' }}
@@ -177,24 +176,23 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
                   className="w-full opacity-80 group-hover:opacity-100 transition-opacity"
                 />
                 
-                {/* Map quick action button */}
                 <a
-                  href={STUDIO_INFO.mapsUrl}
+                  href="https://maps.google.com/?q=London+Ontario+Canada"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="absolute bottom-2 right-2 bg-neutral-950/90 hover:bg-[#00d2b2] hover:text-neutral-950 text-white text-[11px] font-heading uppercase tracking-wider px-2.5 py-1 border border-neutral-700 transition-colors flex items-center gap-1 shadow-md"
                 >
                   <Compass className="w-3 h-3" />
-                  <span>Open in Maps</span>
+                  <span>London, ON</span>
                 </a>
               </div>
 
-              {/* Official Social Links in Left Card */}
+              {/* Official Social Links */}
               <div className="flex items-center justify-between pt-4 text-xs text-neutral-400">
-                <span className="font-heading uppercase tracking-wider text-[11px]">Follow Official:</span>
+                <span className="font-heading uppercase tracking-wider text-[11px]">Follow Ralph Con:</span>
                 <div className="flex items-center gap-3">
                   <a
-                    href={STUDIO_INFO.instagramUrl}
+                    href="https://www.instagram.com/ralcontattoo/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-[#00d2b2] transition-colors flex items-center gap-1"
@@ -204,13 +202,13 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
                   </a>
                   <span>·</span>
                   <a
-                    href={STUDIO_INFO.facebookUrl}
+                    href="https://www.threads.com/@ralcontattoo"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-[#00d2b2] transition-colors flex items-center gap-1"
                   >
-                    <Facebook className="w-3.5 h-3.5" />
-                    <span>Facebook</span>
+                    <AtSign className="w-3.5 h-3.5" />
+                    <span>Threads</span>
                   </a>
                 </div>
               </div>
@@ -218,7 +216,7 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
 
           </div>
 
-          {/* Right Card: Crisp White Form Card matching reference */}
+          {/* Right Card: Form Card */}
           <div className="lg:col-span-7 bg-white text-neutral-900 p-6 sm:p-10 shadow-2xl flex flex-col justify-between">
             {submitStatus === 'success' ? (
               <div className="py-12 flex flex-col items-center text-center space-y-4">
@@ -226,10 +224,10 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
                 <h4 className="font-heading text-2xl font-bold uppercase tracking-wider text-neutral-900">
-                  Inquiry Successfully Received
+                  Consultation Request Received
                 </h4>
                 <p className="text-neutral-600 max-w-md text-sm leading-relaxed">
-                  Thank you, <strong>{formData.fullName}</strong>. We have received your custom tattoo inquiry. Our resident artist will review your concept, size, and reference photos and contact you at <strong>{formData.email}</strong> within 24–48 hours to confirm consultation details and appointment availability.
+                  Thank you, <strong>{formData.fullName}</strong>. Your custom tattoo inquiry has been sent to Ralph Con. He will review your concept and reach out at <strong>{formData.email}</strong> to discuss scheduling and session details.
                 </p>
                 <div className="pt-4">
                   <button
@@ -244,14 +242,14 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
                         style: '',
                         preferredDate: '',
                         budget: '',
-                        artist: '',
+                        artist: '@ralcontattoo',
                         description: '',
                       });
                       setUploadedFiles([]);
                     }}
                     className="px-6 py-2.5 bg-neutral-900 text-white text-xs font-heading uppercase tracking-wider hover:bg-neutral-800 transition-colors cursor-pointer"
                   >
-                    Submit Another Inquiry
+                    Submit Another Request
                   </button>
                 </div>
               </div>
@@ -297,11 +295,11 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
                   </div>
                 </div>
 
-                {/* Row 2: Phone / WhatsApp & Placement on Body */}
+                {/* Row 2: Phone & Placement */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-heading uppercase tracking-wider font-bold text-neutral-800 mb-1">
-                      Phone / WhatsApp
+                      Phone Number
                     </label>
                     <input
                       type="tel"
@@ -325,20 +323,19 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
                       <option value="">Select placement</option>
                       <option value="Forearm / Wrist">Forearm / Wrist</option>
                       <option value="Upper Arm / Bicep">Upper Arm / Bicep</option>
-                      <option value="Full Sleeve">Full Sleeve</option>
+                      <option value="Full Arm Sleeve">Full Arm Sleeve</option>
                       <option value="Chest / Sternum">Chest / Sternum</option>
                       <option value="Upper / Full Back">Upper / Full Back</option>
-                      <option value="Ribs / Stomach">Ribs / Stomach</option>
+                      <option value="Ribs / Side">Ribs / Side</option>
                       <option value="Thigh / Leg / Calf">Thigh / Leg / Calf</option>
                       <option value="Hand / Fingers">Hand / Fingers</option>
-                      <option value="Neck / Behind Ear">Neck / Behind Ear</option>
-                      <option value="Piercing (Ear / Nose / Body)">Piercing (Ear / Nose / Body)</option>
+                      <option value="Neck">Neck</option>
                       <option value="Other Placement">Other Placement</option>
                     </select>
                   </div>
                 </div>
 
-                {/* Row 3: Approximate Size & Style Preference */}
+                {/* Row 3: Size & Style Preference */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-heading uppercase tracking-wider font-bold text-neutral-800 mb-1">
@@ -360,7 +357,7 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
                   </div>
                   <div>
                     <label className="block text-xs font-heading uppercase tracking-wider font-bold text-neutral-800 mb-1">
-                      Style Preference
+                      Specialty Style
                     </label>
                     <select
                       name="style"
@@ -369,19 +366,16 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
                       className="w-full px-3.5 py-2.5 bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm focus:outline-none focus:border-[#00a88f] focus:bg-white transition-all"
                     >
                       <option value="">Select style</option>
-                      <option value="Black & Grey Realism">Black & Grey Realism</option>
-                      <option value="Sacred Geometry & Dotwork">Sacred Geometry & Dotwork</option>
-                      <option value="Illustrative & Dark Art">Illustrative & Dark Art</option>
-                      <option value="Fine Line & Botanical">Fine Line & Botanical</option>
-                      <option value="Custom Script & Lettering">Custom Script & Lettering</option>
-                      <option value="Traditional & Neo-Trad">Traditional & Neo-Trad</option>
-                      <option value="Professional Piercing">Professional Piercing</option>
-                      <option value="Cover-Up / Touch-Up">Cover-Up / Touch-Up</option>
+                      <option value="Realism">Realism</option>
+                      <option value="Black & Grey">Black & Grey</option>
+                      <option value="Dark Side">Dark Side</option>
+                      <option value="Ornamental">Ornamental</option>
+                      <option value="Custom Combination">Custom Combination</option>
                     </select>
                   </div>
                 </div>
 
-                {/* Row 4: Preferred Date & Budget Range */}
+                {/* Row 4: Preferred Date & Budget */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-heading uppercase tracking-wider font-bold text-neutral-800 mb-1">
@@ -406,51 +400,31 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
                       className="w-full px-3.5 py-2.5 bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm focus:outline-none focus:border-[#00a88f] focus:bg-white transition-all"
                     >
                       <option value="">Select budget range</option>
-                      <option value="$100 - $250">$100 – $250 (Shop Min $100)</option>
-                      <option value="$250 - $500">$250 – $500</option>
+                      <option value="$200 - $500">$200 – $500</option>
                       <option value="$500 - $1,000">$500 – $1,000</option>
-                      <option value="$1,000+ / Full Day">$1,000+ / Full Day Session</option>
+                      <option value="$1,000 - $2,000">$1,000 – $2,000</option>
+                      <option value="$2,000+ / Full Day">$2,000+ / Full Day Session</option>
                     </select>
                   </div>
                 </div>
 
-                {/* Row 5: Preferred Artist Dropdown */}
+                {/* Tattoo Idea / Description */}
                 <div>
                   <label className="block text-xs font-heading uppercase tracking-wider font-bold text-neutral-800 mb-1">
-                    Select Artist
-                  </label>
-                  <select
-                    name="artist"
-                    value={formData.artist}
-                    onChange={handleInputChange}
-                    className="w-full px-3.5 py-2.5 bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm focus:outline-none focus:border-[#00a88f] focus:bg-white transition-all"
-                  >
-                    <option value="">Any Available Resident Artist</option>
-                    {ARTISTS.map((artist) => (
-                      <option key={artist.id} value={artist.handle}>
-                        {artist.name} ({artist.handle}) — {artist.specialty}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                {/* Row 6: Tattoo Idea / Description */}
-                <div>
-                  <label className="block text-xs font-heading uppercase tracking-wider font-bold text-neutral-800 mb-1">
-                    Tattoo Idea / Description *
+                    Tattoo Concept & Idea *
                   </label>
                   <textarea
                     name="description"
                     rows={3}
                     required
-                    placeholder="Describe your tattoo idea in detail (theme, elements, meaning, reference links, etc.)..."
+                    placeholder="Describe your tattoo concept in detail (theme, elements, symbolism, reference links, etc.)..."
                     value={formData.description}
                     onChange={handleInputChange}
                     className="w-full px-3.5 py-2.5 bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm focus:outline-none focus:border-[#00a88f] focus:bg-white transition-all placeholder:text-neutral-400"
                   />
                 </div>
 
-                {/* Row 7: Upload Reference Images */}
+                {/* Reference Images */}
                 <div>
                   <label className="block text-xs font-heading uppercase tracking-wider font-bold text-neutral-800 mb-1">
                     Upload Reference Images
@@ -474,7 +448,6 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
                     </div>
                   </div>
 
-                  {/* Uploaded File Previews */}
                   {uploadedFiles.length > 0 && (
                     <div className="flex flex-wrap gap-2 mt-2.5">
                       {uploadedFiles.map((file, idx) => (
@@ -500,17 +473,17 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
                   )}
                 </div>
 
-                {/* Submit Button (Matching reference teal button "Request Appointment") */}
+                {/* Submit Button */}
                 <div className="pt-2">
                   <button
                     type="submit"
                     disabled={isSubmitting}
                     className="w-full py-3.5 bg-[#00a88f] hover:bg-[#008c77] disabled:opacity-70 text-white font-heading font-bold text-sm uppercase tracking-wider shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer"
                   >
-                    {isSubmitting ? 'Submitting Inquiry...' : 'Request Appointment'}
+                    {isSubmitting ? 'Submitting Request...' : 'Request Consultation'}
                   </button>
                   <p className="text-[11px] text-neutral-500 text-center mt-2 font-normal">
-                    * Submitting this form sends an inquiry. No payment is charged now. Your artist will confirm pricing & deposit during consultation.
+                    * Submitting sends a consultation request. No payment is charged now.
                   </p>
                 </div>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import FiligreeDivider from './FiligreeDivider';
-import { Sparkles, Calendar, HeartHandshake, ShieldCheck } from 'lucide-react';
+import { Sparkles, Calendar, HeartHandshake } from 'lucide-react';
 import { STUDIO_INFO } from '../data/studioData';
 
 interface ProcessSectionProps {
@@ -11,20 +11,20 @@ export default function ProcessSection({ onBookClick }: ProcessSectionProps) {
   const steps = [
     {
       num: "01",
-      title: "Share Your Idea",
-      desc: "Send your design concept, size, reference images, and desired placement via our booking form or scheduled in-studio consultation.",
+      title: "Share Your Concept",
+      desc: "Send your design idea, placement preference, approximate size, and reference photos via our online booking form or direct email.",
       icon: Sparkles,
     },
     {
       num: "02",
-      title: "Secure Your Spot",
-      desc: "Consult with your dedicated resident artist, finalize custom artwork mockups, and confirm your session time with a deposit.",
+      title: "Consultation & Deposit",
+      desc: "Discuss your custom design directly with Ralph Con, review custom mockups, and secure your session date in London, Ontario.",
       icon: Calendar,
     },
     {
       num: "03",
-      title: "Enjoy Your New Ink",
-      desc: "Come in, relax in our hospital-grade sterile Las Vegas studio, and leave with museum-grade custom body art made to endure.",
+      title: "Wear Art That Endures",
+      desc: "Experience a private, sterile session and leave with museum-grade body art engineered to live beneath the skin.",
       icon: HeartHandshake,
     },
   ];
@@ -38,14 +38,14 @@ export default function ProcessSection({ onBookClick }: ProcessSectionProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Left Column: Studio Photo in Signature Cyan/Teal Brush Frame */}
+          {/* Left Column: Official Shop Photo in Cyan/Teal Brush Frame */}
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-sm sm:max-w-md">
               <div className="teal-brush-frame bg-black shadow-2xl relative z-10">
                 <div className="aspect-[4/5] overflow-hidden bg-neutral-950 relative">
                   <img
                     src={STUDIO_INFO.interiorPhoto}
-                    alt="Houndstooth Tattoo Studio Interior Las Vegas"
+                    alt="Ralph Con Studio London Ontario"
                     className="w-full h-full object-cover filter contrast-115"
                     referrerPolicy="no-referrer"
                   />
@@ -53,13 +53,13 @@ export default function ProcessSection({ onBookClick }: ProcessSectionProps) {
                   
                   <div className="absolute bottom-4 left-4 right-4 z-20">
                     <span className="text-[10px] font-heading uppercase tracking-widest text-[#00d2b2] font-semibold block">
-                      Las Vegas Studio
+                      Ralph Con Studio
                     </span>
                     <span className="font-heading text-base font-bold text-white uppercase block">
-                      4045 S Buffalo Dr, Suite A109
+                      London, Ontario, Canada
                     </span>
                     <span className="text-xs text-neutral-300 block mt-0.5">
-                      Private booths & hospital-grade hygiene
+                      Private custom artistry & sterile environment
                     </span>
                   </div>
                 </div>
@@ -70,7 +70,7 @@ export default function ProcessSection({ onBookClick }: ProcessSectionProps) {
             </div>
           </div>
 
-          {/* Right Column: Process Steps matching reference */}
+          {/* Right Column: Process Steps */}
           <div className="lg:col-span-7 flex flex-col items-start space-y-8">
             
             <FiligreeDivider
@@ -81,13 +81,12 @@ export default function ProcessSection({ onBookClick }: ProcessSectionProps) {
 
             <div className="space-y-6 w-full max-w-xl">
               {steps.map((step) => {
-                const IconComponent = step.icon;
                 return (
                   <div
                     key={step.num}
                     className="flex items-start gap-5 p-5 bg-neutral-900/40 border border-neutral-800/80 hover:border-[#00d2b2]/40 transition-colors"
                   >
-                    {/* Number block strictly matching reference cyan bordered box */}
+                    {/* Number block matching cyan bordered box */}
                     <div className="w-12 h-12 shrink-0 border-2 border-[#00d2b2] text-[#00d2b2] flex items-center justify-center font-heading font-bold text-xl bg-[#00d2b2]/10 shadow-[0_0_10px_rgba(0,210,178,0.2)]">
                       {step.num}
                     </div>

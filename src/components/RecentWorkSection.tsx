@@ -19,11 +19,10 @@ export default function RecentWorkSection({
 
   const categories = [
     'All',
-    'Sacred Geometry',
     'Realism',
     'Black & Grey',
-    'Illustrative & Fine Line',
-    'Custom Work',
+    'Dark Side',
+    'Ornamental',
   ];
 
   const filteredItems = selectedCategory === 'All'
@@ -40,14 +39,14 @@ export default function RecentWorkSection({
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Heading matching reference "OUR RECENT WORK" */}
+        {/* Section Heading matching reference */}
         <FiligreeDivider
-          title="OUR RECENT WORK"
-          subtitle="Genuine Tattoo Artistry"
+          title="SELECTED TATTOO WORK"
+          subtitle="Realism, Black & Grey, Dark Side & Ornamental"
           className="mb-10"
         />
 
-        {/* Category Filter Buttons (Functional segmented tabs) */}
+        {/* Category Filter Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
           {categories.map((cat) => (
             <button
@@ -64,7 +63,7 @@ export default function RecentWorkSection({
           ))}
         </div>
 
-        {/* Masonry / Showcase Grid strictly matching reference proportions */}
+        {/* Masonry / Showcase Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
           {displayItems.map((item, idx) => (
             <div
@@ -92,7 +91,7 @@ export default function RecentWorkSection({
                 <h3 className="font-heading text-sm font-bold text-white uppercase leading-snug line-clamp-1">
                   {item.title}
                 </h3>
-                <span className="text-[11px] text-neutral-300 flex items-center gap-1 mt-0.5">
+                <span className="text-[11px] text-neutral-300 flex items-center gap-1 mt-0.5 font-mono">
                   <Instagram className="w-3 h-3 text-[#00d2b2]" />
                   {item.artistHandle}
                 </span>
@@ -106,7 +105,7 @@ export default function RecentWorkSection({
           ))}
         </div>
 
-        {/* "See More ∨" link button matching reference design */}
+        {/* "See More" button */}
         {filteredItems.length > limit && (
           <div className="flex justify-center mt-12">
             <button

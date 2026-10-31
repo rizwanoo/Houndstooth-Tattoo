@@ -4,7 +4,7 @@ import { FAQ_ITEMS } from '../data/studioData';
 import { ChevronDown } from 'lucide-react';
 
 export default function FAQSection() {
-  // Pre-expand question 0 by default, just like the reference layout
+  // Pre-expand question 0 by default
   const [openIndices, setOpenIndices] = useState<number[]>([0]);
 
   const toggleIndex = (idx: number) => {
@@ -19,7 +19,7 @@ export default function FAQSection() {
   return (
     <section id="faq" className="relative py-24 bg-[#080808] text-white overflow-hidden border-t border-neutral-900">
       
-      {/* Background Dim Tattoo Photo Overlay from reference */}
+      {/* Background Dim Photo Overlay */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         <img
           src="/assets/images/portfolio_04.jpg"
@@ -32,14 +32,13 @@ export default function FAQSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Heading matching reference screenshot */}
         <FiligreeDivider
           title="FREQUENTLY ASKED QUESTIONS"
-          subtitle="Clear Answers Before You Ink"
+          subtitle="Consultation & Tattooing Details"
           className="mb-14"
         />
 
-        {/* 2-Column Grid Layout strictly matching reference */}
+        {/* 2-Column Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
           
           {/* Left Column (Items 1-4) */}
@@ -55,7 +54,7 @@ export default function FAQSection() {
                 >
                   <button
                     onClick={() => toggleIndex(globalIdx)}
-                    className={`w-full p-4 text-left font-heading font-bold text-sm sm:text-base uppercase tracking-wider flex items-center justify-between gap-3 transition-colors ${
+                    className={`w-full p-4 text-left font-heading font-bold text-sm sm:text-base uppercase tracking-wider flex items-center justify-between gap-3 transition-colors cursor-pointer ${
                       isOpen
                         ? 'bg-[#00d2b2] text-neutral-950 shadow-sm'
                         : 'bg-neutral-900/60 text-white hover:text-[#00d2b2]'
@@ -92,7 +91,7 @@ export default function FAQSection() {
                 >
                   <button
                     onClick={() => toggleIndex(globalIdx)}
-                    className={`w-full p-4 text-left font-heading font-bold text-sm sm:text-base uppercase tracking-wider flex items-center justify-between gap-3 transition-colors ${
+                    className={`w-full p-4 text-left font-heading font-bold text-sm sm:text-base uppercase tracking-wider flex items-center justify-between gap-3 transition-colors cursor-pointer ${
                       isOpen
                         ? 'bg-[#00d2b2] text-neutral-950 shadow-sm'
                         : 'bg-neutral-900/60 text-white hover:text-[#00d2b2]'

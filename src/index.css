@@ -5,6 +5,8 @@
     --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-heading: 'Oswald', sans-serif;
     --font-cinzel: 'Cinzel', serif;
+    --font-decorative: 'Cinzel Decorative', 'Cinzel', serif;
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
     --font-script: 'Alex Brush', cursive;
   }
 
@@ -19,6 +21,14 @@
 
 .font-cinzel {
   font-family: var(--font-cinzel);
+}
+
+.font-decorative {
+  font-family: var(--font-decorative);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
 }
 
 .font-script {

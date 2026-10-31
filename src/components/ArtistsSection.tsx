@@ -1,7 +1,7 @@
 import React from 'react';
 import FiligreeDivider from './FiligreeDivider';
 import { ARTISTS, Artist, PortfolioItem, PORTFOLIO_ITEMS } from '../data/studioData';
-import { Instagram, ExternalLink, Calendar, CheckCircle2 } from 'lucide-react';
+import { Instagram, ExternalLink, Calendar, CheckCircle2, AtSign } from 'lucide-react';
 
 interface ArtistsSectionProps {
   onSelectArtistForBooking?: (handle: string) => void;
@@ -21,11 +21,11 @@ export default function ArtistsSection({
       onSelectWork({
         id: `piece-${Date.now()}`,
         title: `${artist.name} Custom Piece`,
-        category: 'Custom Work',
+        category: 'Realism',
         image: imagePath,
         artistHandle: artist.handle,
         artistName: artist.name,
-        description: `Bespoke custom work by ${artist.name} (${artist.handle}) at Houndstooth Tattoo Las Vegas.`,
+        description: `Bespoke custom tattoo artwork by ${artist.name} (${artist.handle}) in London, Ontario.`,
       });
     }
   };
@@ -39,113 +39,134 @@ export default function ArtistsSection({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <FiligreeDivider
-          title="RESIDENT ARTISTS"
-          subtitle="Master Craftsmen & Piercers"
+          title="THE ARTIST"
+          subtitle="Tattoo Artist Since 2005"
           className="mb-14"
         />
 
-        <p className="text-center text-neutral-300 max-w-2xl mx-auto -mt-8 mb-12 text-sm sm:text-base leading-relaxed">
-          Meet the verified resident artists at Houndstooth Tattoo Las Vegas. Each artist brings an authentic signature style — from sacred geometry and dark realism to fine-line botanicals and custom script.
-        </p>
-
-        {/* 3-Column / Responsive Artist Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Master Artist Profile Card */}
+        <div className="max-w-4xl mx-auto">
           {ARTISTS.map((artist) => (
             <div
               key={artist.id}
-              className="bg-neutral-900/60 border border-neutral-800 hover:border-[#00d2b2]/70 transition-all duration-300 flex flex-col justify-between overflow-hidden group shadow-xl"
+              className="bg-neutral-900/60 border border-neutral-800 hover:border-[#00d2b2]/70 transition-all duration-300 overflow-hidden shadow-2xl"
             >
-              <div>
-                {/* Header with Artist Name & Instagram */}
-                <div className="p-6 border-b border-neutral-800/80 bg-neutral-950/70">
-                  <div className="flex items-start justify-between gap-3">
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <h3 className="font-heading font-bold text-xl uppercase tracking-wider text-white group-hover:text-[#00d2b2] transition-colors">
-                          {artist.name}
-                        </h3>
-                        <span title="Verified Studio Resident">
-                          <CheckCircle2 className="w-4 h-4 text-[#00d2b2] shrink-0" />
-                        </span>
-                      </div>
-                      <a
-                        href={artist.instagram}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs text-[#00d2b2] hover:text-[#00e8c4] transition-colors mt-1 font-mono"
-                      >
-                        <Instagram className="w-3.5 h-3.5" />
-                        <span>{artist.handle}</span>
-                        <ExternalLink className="w-3 h-3 opacity-70" />
-                      </a>
-                    </div>
-
-                    {/* Small avatar or signature icon */}
-                    <div className="w-12 h-12 rounded-full overflow-hidden border border-[#00d2b2]/40 bg-black shrink-0">
-                      <img
-                        src={artist.avatar}
-                        alt={artist.name}
-                        className="w-full h-full object-cover filter contrast-110"
-                        referrerPolicy="no-referrer"
-                      />
-                    </div>
-                  </div>
-
-                  <span className="inline-block mt-3 text-xs uppercase tracking-wider font-heading font-semibold text-neutral-400 bg-neutral-900 px-2.5 py-1 border border-neutral-800">
-                    {artist.specialty}
-                  </span>
+              <div className="p-8 sm:p-10 border-b border-neutral-800/80 bg-neutral-950/80 flex flex-col md:flex-row items-center md:items-start gap-6">
+                
+                {/* Artist Avatar Logo */}
+                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 border-[#00d2b2] p-1 bg-black shrink-0 shadow-[0_0_20px_rgba(0,210,178,0.3)]">
+                  <img
+                    src={artist.avatar}
+                    alt={artist.name}
+                    className="w-full h-full object-cover filter contrast-110 rounded-full"
+                    referrerPolicy="no-referrer"
+                  />
                 </div>
 
-                {/* Bio Prose */}
-                <div className="p-6">
-                  <p className="text-sm text-neutral-300 leading-relaxed font-normal">
+                {/* Artist Bio & Metadata */}
+                <div className="flex-1 text-center md:text-left space-y-3">
+                  <div className="flex flex-col sm:flex-row items-center md:items-start justify-between gap-2">
+                    <div>
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <h3 className="font-heading font-bold text-2xl sm:text-3xl uppercase tracking-wider text-white">
+                          {artist.name}
+                        </h3>
+                        <span title="Master Artist Since 2005">
+                          <CheckCircle2 className="w-5 h-5 text-[#00d2b2] shrink-0" />
+                        </span>
+                      </div>
+                      <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 text-xs text-[#00d2b2] mt-1 font-mono">
+                        <a
+                          href={artist.instagram}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-[#00e8c4] transition-colors inline-flex items-center gap-1"
+                        >
+                          <Instagram className="w-3.5 h-3.5" />
+                          <span>{artist.handle}</span>
+                          <ExternalLink className="w-3 h-3 opacity-70" />
+                        </a>
+                        {artist.threads && (
+                          <a
+                            href={artist.threads}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-[#00e8c4] transition-colors inline-flex items-center gap-1"
+                          >
+                            <AtSign className="w-3.5 h-3.5" />
+                            <span>Threads</span>
+                          </a>
+                        )}
+                      </div>
+                    </div>
+
+                    <span className="inline-block text-xs uppercase tracking-wider font-heading font-semibold text-[#00d2b2] bg-neutral-900 px-3 py-1.5 border border-neutral-800">
+                      Tattoo Artist Since 2005
+                    </span>
+                  </div>
+
+                  <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-normal pt-2">
                     {artist.bio}
                   </p>
 
-                  {/* Featured Works Showcase Thumbnails */}
-                  <div className="mt-5">
-                    <span className="text-[11px] font-heading uppercase tracking-widest text-neutral-400 block mb-2 font-semibold">
-                      Featured Tattoos & Artwork
+                  <div className="pt-2 flex flex-wrap gap-2 justify-center md:justify-start">
+                    <span className="text-xs bg-neutral-900 text-neutral-300 px-2.5 py-1 border border-neutral-800 font-heading uppercase tracking-wider">
+                      Realism
                     </span>
-                    <div className="grid grid-cols-4 gap-2">
-                      {artist.featuredWorks.map((workImg, idx) => (
-                        <div
-                          key={idx}
-                          onClick={() => handlePieceClick(workImg, artist)}
-                          className="aspect-square bg-neutral-950 overflow-hidden border border-neutral-800 hover:border-[#00d2b2] cursor-pointer group/thumb"
-                          title="Click to inspect piece"
-                        >
-                          <img
-                            src={workImg}
-                            alt={`${artist.name} tattoo sample ${idx + 1}`}
-                            className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300 filter contrast-105"
-                            referrerPolicy="no-referrer"
-                          />
-                        </div>
-                      ))}
-                    </div>
+                    <span className="text-xs bg-neutral-900 text-neutral-300 px-2.5 py-1 border border-neutral-800 font-heading uppercase tracking-wider">
+                      Black & Grey
+                    </span>
+                    <span className="text-xs bg-neutral-900 text-neutral-300 px-2.5 py-1 border border-neutral-800 font-heading uppercase tracking-wider">
+                      Dark Side
+                    </span>
+                    <span className="text-xs bg-neutral-900 text-neutral-300 px-2.5 py-1 border border-neutral-800 font-heading uppercase tracking-wider">
+                      Ornamental
+                    </span>
                   </div>
                 </div>
+
               </div>
 
-              {/* Bottom Card Actions */}
-              <div className="p-6 pt-0 mt-auto">
-                <div className="grid grid-cols-2 gap-2">
+              {/* Featured Works Grid */}
+              <div className="p-6 sm:p-8 bg-neutral-950/40">
+                <span className="text-xs font-heading uppercase tracking-widest text-neutral-400 block mb-4 font-semibold text-center md:text-left">
+                  Featured Portfolio Highlights
+                </span>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  {artist.featuredWorks.map((workImg, idx) => (
+                    <div
+                      key={idx}
+                      onClick={() => handlePieceClick(workImg, artist)}
+                      className="aspect-square bg-neutral-950 overflow-hidden border border-neutral-800 hover:border-[#00d2b2] cursor-pointer group/thumb shadow-md"
+                      title="Click to inspect artwork"
+                    >
+                      <img
+                        src={workImg}
+                        alt={`${artist.name} artwork sample ${idx + 1}`}
+                        className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300 filter contrast-105"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                  ))}
+                </div>
+
+                {/* Card Actions */}
+                <div className="mt-8 flex flex-col sm:flex-row items-center justify-end gap-3">
                   <a
                     href={artist.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="py-2.5 px-3 bg-neutral-900 hover:bg-neutral-800 text-neutral-300 hover:text-white text-xs font-heading uppercase tracking-wider text-center border border-neutral-800 hover:border-neutral-700 transition-colors flex items-center justify-center gap-1.5"
+                    className="w-full sm:w-auto py-3 px-6 bg-neutral-900 hover:bg-neutral-800 text-neutral-200 hover:text-white text-xs font-heading uppercase tracking-wider text-center border border-neutral-800 transition-colors flex items-center justify-center gap-2"
                   >
-                    <Instagram className="w-3.5 h-3.5 text-[#00d2b2]" />
-                    <span>Instagram</span>
+                    <Instagram className="w-4 h-4 text-[#00d2b2]" />
+                    <span>Follow @ralcontattoo</span>
                   </a>
                   <button
                     onClick={() => onSelectArtistForBooking && onSelectArtistForBooking(artist.handle)}
-                    className="py-2.5 px-3 bg-[#00d2b2] hover:bg-[#00e8c4] text-neutral-950 text-xs font-heading font-bold uppercase tracking-wider text-center transition-colors flex items-center justify-center gap-1.5 shadow-[0_0_10px_rgba(0,210,178,0.2)] cursor-pointer"
+                    className="w-full sm:w-auto py-3 px-6 bg-[#00d2b2] hover:bg-[#00e8c4] text-neutral-950 text-xs font-heading font-bold uppercase tracking-wider text-center transition-colors flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(0,210,178,0.3)] cursor-pointer"
                   >
-                    <Calendar className="w-3.5 h-3.5" />
-                    <span>Book Artist</span>
+                    <Calendar className="w-4 h-4" />
+                    <span>Book Session With Ralph Con</span>
                   </button>
                 </div>
               </div>
