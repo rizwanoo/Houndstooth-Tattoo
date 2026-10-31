@@ -39,6 +39,8 @@ export const STUDIO_INFO = {
   email: "Ralphcon.2020@gmail.com",
   type: "Custom Tattoo Studio & Private Artistry",
   logo: "/assets/images/logo.jpg",
+  heroPhoto: "/assets/images/hero_bright_realism.jpg",
+  heroPhotoAlt: "/assets/images/studio_interior_1.jpg",
   heroVideo: "/assets/video/hero_new.mp4",
   interiorPhoto: "/assets/images/studio_interior_1.jpg",
   artistActionPhoto: "/assets/images/studio_interior_1.jpg",

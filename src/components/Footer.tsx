@@ -8,7 +8,7 @@ interface FooterProps {
 
 export default function Footer({ onNavigate }: FooterProps) {
   return (
-    <footer className="relative bg-black text-white pt-20 pb-12 overflow-hidden border-t border-neutral-900">
+    <footer className="relative bg-black text-white pt-24 pb-16 sm:pt-32 sm:pb-20 overflow-hidden border-t border-neutral-900">
       
       {/* Top Ink Splatter Transition */}
       <div className="absolute top-0 left-0 right-0 overflow-hidden leading-none z-20 pointer-events-none transform -translate-y-1">
@@ -23,12 +23,12 @@ export default function Footer({ onNavigate }: FooterProps) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
         
-        {/* Centered Ralph Con Logo Emblem */}
+        {/* Centered Ralph Con Logo Emblem with Roomy Spacing */}
         <button
           onClick={() => onNavigate('home')}
-          className="group focus:outline-none mb-6 flex flex-col items-center cursor-pointer"
+          className="group focus:outline-none mb-8 sm:mb-10 flex flex-col items-center cursor-pointer"
         >
-          <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-[#00d2b2] p-1 shadow-[0_0_20px_rgba(0,210,178,0.3)] group-hover:scale-105 transition-all duration-300 bg-black">
+          <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-[#00d2b2] p-1 shadow-[0_0_20px_rgba(0,210,178,0.3)] group-hover:scale-105 transition-all duration-300 bg-black">
             <img
               src={STUDIO_INFO.logo}
               alt="Ralph Con Official Logo"
@@ -36,16 +36,16 @@ export default function Footer({ onNavigate }: FooterProps) {
               referrerPolicy="no-referrer"
             />
           </div>
-          <span className="font-heading text-2xl font-bold tracking-wider uppercase mt-3 text-white group-hover:text-[#00d2b2] transition-colors">
+          <span className="font-heading text-2xl sm:text-3xl font-bold tracking-wider uppercase mt-4 text-white group-hover:text-[#00d2b2] transition-colors">
             Ralph Con
           </span>
-          <span className="text-xs uppercase tracking-widest text-[#00d2b2] font-medium">
+          <span className="text-xs uppercase tracking-widest text-[#00d2b2] font-medium mt-1">
             London, Ontario, Canada
           </span>
         </button>
 
-        {/* Primary Navigation Links */}
-        <nav className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-xs font-heading uppercase tracking-widest text-neutral-400 mb-8">
+        {/* Primary Navigation Links with Comfortable Gap */}
+        <nav className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm font-heading uppercase tracking-widest text-neutral-400 mb-10 sm:mb-12">
           <button
             onClick={() => onNavigate('home')}
             className="hover:text-[#00d2b2] transition-colors cursor-pointer"
@@ -90,19 +90,19 @@ export default function Footer({ onNavigate }: FooterProps) {
           </button>
         </nav>
 
-        {/* Location, Email & Social Connections */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-xs text-neutral-400 mb-8">
-          <div className="flex items-center gap-1.5">
-            <MapPin className="w-3.5 h-3.5 text-[#00d2b2]" />
+        {/* Location, Email & Social Connections with Generous Spacing */}
+        <div className="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 text-xs sm:text-sm text-neutral-400 mb-10 sm:mb-12">
+          <div className="flex items-center gap-2">
+            <MapPin className="w-4 h-4 text-[#00d2b2]" />
             <span>London, Ontario, Canada</span>
           </div>
-          <div className="flex items-center gap-1.5">
-            <Mail className="w-3.5 h-3.5 text-[#00d2b2]" />
+          <div className="flex items-center gap-2">
+            <Mail className="w-4 h-4 text-[#00d2b2]" />
             <a href="mailto:Ralphcon.2020@gmail.com" className="hover:text-[#00d2b2] transition-colors">
               Ralphcon.2020@gmail.com
             </a>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-5">
             <a
               href="https://www.instagram.com/ralcontattoo/"
               target="_blank"
@@ -124,10 +124,10 @@ export default function Footer({ onNavigate }: FooterProps) {
           </div>
         </div>
 
-        {/* Bottom Copyright & Trust Line */}
-        <div className="pt-8 border-t border-neutral-900 w-full max-w-4xl flex flex-col sm:flex-row items-center justify-between text-[11px] text-neutral-400 gap-3">
+        {/* Bottom Copyright & Trust Line with Roomy Padding */}
+        <div className="pt-10 border-t border-neutral-900 w-full max-w-4xl flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
           <div className="flex items-center gap-2">
-            <Shield className="w-3.5 h-3.5 text-[#00d2b2]" />
+            <Shield className="w-4 h-4 text-[#00d2b2]" />
             <span>Tattoo Artist Since 2005 · Realism, Black & Grey, Dark Side & Ornamental</span>
           </div>
           <div>

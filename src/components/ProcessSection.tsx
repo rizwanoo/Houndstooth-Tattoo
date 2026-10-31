@@ -30,13 +30,13 @@ export default function ProcessSection({ onBookClick }: ProcessSectionProps) {
   ];
 
   return (
-    <section id="process" className="relative py-24 bg-[#0a0a0a] text-white overflow-hidden border-t border-b border-neutral-900">
+    <section id="process" className="relative py-28 sm:py-36 bg-[#0a0a0a] text-white overflow-hidden border-t border-b border-neutral-900">
       
       {/* Decorative filigree background aura */}
       <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-96 h-96 bg-[#00d2b2]/5 blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-center">
           
           {/* Left Column: Official Shop Photo in Cyan/Teal Brush Frame */}
           <div className="lg:col-span-5 flex justify-center">
@@ -51,51 +51,58 @@ export default function ProcessSection({ onBookClick }: ProcessSectionProps) {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
                   
-                  <div className="absolute bottom-4 left-4 right-4 z-20">
+                  <div className="absolute bottom-5 left-5 right-5 z-20">
                     <span className="text-[10px] font-heading uppercase tracking-widest text-[#00d2b2] font-semibold block">
                       Ralph Con Studio
                     </span>
-                    <span className="font-heading text-base font-bold text-white uppercase block">
+                    <span className="font-heading text-lg font-bold text-white uppercase block mt-0.5">
                       London, Ontario, Canada
                     </span>
-                    <span className="text-xs text-neutral-300 block mt-0.5">
-                      Private custom artistry & sterile environment
+                    <span className="text-xs text-neutral-400 font-mono block mt-1">
+                      Private Atelier · Since 2005
                     </span>
                   </div>
                 </div>
               </div>
 
-              {/* Background glow behind frame */}
-              <div className="absolute -top-4 -left-4 w-32 h-32 bg-[#00d2b2]/10 rounded-full blur-2xl pointer-events-none" />
+              {/* Decorative accent behind */}
+              <div className="absolute -top-4 -left-4 w-full h-full border border-neutral-800 -z-10 pointer-events-none hidden sm:block" />
             </div>
           </div>
 
-          {/* Right Column: Process Steps */}
-          <div className="lg:col-span-7 flex flex-col items-start space-y-8">
+          {/* Right Column: 3-Step Process with Generous Breathing Room */}
+          <div className="lg:col-span-7 flex flex-col justify-center">
             
             <FiligreeDivider
               title="THE PROCESS"
-              subtitle="Three Simple Steps"
-              className="items-start text-left"
+              subtitle="How We Work"
+              className="lg:items-start lg:text-left mb-12 sm:mb-16"
             />
 
-            <div className="space-y-6 w-full max-w-xl">
+            <div className="space-y-8 sm:space-y-10">
               {steps.map((step) => {
+                const IconComponent = step.icon;
                 return (
                   <div
                     key={step.num}
-                    className="flex items-start gap-5 p-5 bg-neutral-900/40 border border-neutral-800/80 hover:border-[#00d2b2]/40 transition-colors"
+                    className="flex flex-col sm:flex-row items-start gap-5 sm:gap-6 p-6 sm:p-7 bg-neutral-950/70 border border-neutral-850 hover:border-[#00d2b2]/50 transition-all duration-300 group"
                   >
-                    {/* Number block matching cyan bordered box */}
-                    <div className="w-12 h-12 shrink-0 border-2 border-[#00d2b2] text-[#00d2b2] flex items-center justify-center font-heading font-bold text-xl bg-[#00d2b2]/10 shadow-[0_0_10px_rgba(0,210,178,0.2)]">
-                      {step.num}
+                    {/* Step Number & Icon */}
+                    <div className="flex items-center gap-3 sm:flex-col sm:items-center shrink-0">
+                      <span className="font-heading text-3xl sm:text-4xl font-bold text-[#00d2b2] group-hover:scale-105 transition-transform">
+                        {step.num}
+                      </span>
+                      <div className="w-10 h-10 rounded-none bg-neutral-900 border border-neutral-800 flex items-center justify-center text-[#00d2b2] shrink-0">
+                        <IconComponent className="w-5 h-5" />
+                      </div>
                     </div>
 
-                    <div className="space-y-1">
-                      <h3 className="font-heading text-lg font-bold uppercase tracking-wider text-white">
+                    {/* Step Content */}
+                    <div className="flex-1">
+                      <h4 className="font-heading text-lg sm:text-xl font-bold uppercase tracking-wider text-white group-hover:text-[#00d2b2] transition-colors leading-snug">
                         {step.title}
-                      </h3>
-                      <p className="text-sm text-neutral-300 leading-relaxed font-normal">
+                      </h4>
+                      <p className="mt-2.5 text-neutral-300 text-sm sm:text-base leading-relaxed font-normal">
                         {step.desc}
                       </p>
                     </div>
@@ -104,13 +111,13 @@ export default function ProcessSection({ onBookClick }: ProcessSectionProps) {
               })}
             </div>
 
-            {/* Teal Appointment CTA */}
-            <div className="pt-2">
+            {/* Consultation Button */}
+            <div className="mt-12 sm:mt-14 pt-4">
               <button
                 onClick={onBookClick}
-                className="px-8 py-3.5 bg-[#00d2b2] hover:bg-[#00e8c4] text-neutral-950 font-heading font-bold text-sm uppercase tracking-wider shadow-[0_0_20px_rgba(0,210,178,0.4)] hover:shadow-[0_0_28px_rgba(0,210,178,0.6)] transition-all duration-200 transform hover:-translate-y-0.5 cursor-pointer"
+                className="w-full sm:w-auto px-10 py-4 bg-[#00d2b2] hover:bg-[#00e8c4] text-neutral-950 font-heading font-bold text-sm uppercase tracking-widest shadow-[0_0_20px_rgba(0,210,178,0.4)] hover:shadow-[0_0_25px_rgba(0,210,178,0.7)] transition-all duration-200 transform hover:-translate-y-0.5 cursor-pointer text-center"
               >
-                Book an Appointment
+                Start Your Consultation
               </button>
             </div>
 

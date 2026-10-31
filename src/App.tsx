@@ -109,37 +109,37 @@ export default function App() {
 
         {/* PAGE 2: ARTISTS */}
         {currentPage === 'artists' && (
-          <div className="pt-28 pb-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+          <div className="pt-36 sm:pt-44 pb-28 sm:pb-36">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16">
               <button
                 onClick={() => {
                   setCurrentPage('home');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="inline-flex items-center gap-2 text-xs font-heading uppercase tracking-widest text-neutral-400 hover:text-[#00d2b2] transition-colors mb-6 cursor-pointer"
+                className="inline-flex items-center gap-2 text-xs font-heading uppercase tracking-widest text-neutral-400 hover:text-[#00d2b2] transition-colors mb-8 cursor-pointer"
               >
                 <ArrowLeft className="w-4 h-4" />
                 <span>Back to Home</span>
               </button>
 
-              <div className="bg-neutral-950 border border-neutral-800 p-8 sm:p-12 text-center relative overflow-hidden shadow-2xl">
+              <div className="bg-neutral-950 border border-neutral-800 p-10 sm:p-16 text-center relative overflow-hidden shadow-2xl">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#00d2b2]/5 rounded-full blur-3xl pointer-events-none" />
                 <FiligreeDivider
                   title="THE TATTOO ARTIST"
                   subtitle="Ralph Con · Tattoo Artist Since 2005"
-                  className="mb-4"
+                  className="mb-6 sm:mb-8"
                 />
-                <p className="text-sm sm:text-base text-neutral-300 max-w-3xl mx-auto leading-relaxed">
+                <p className="text-base sm:text-lg text-neutral-300 max-w-3xl mx-auto leading-relaxed sm:leading-loose">
                   Ralph Con has been creating bespoke custom body artistry since 2005. Specializing in Realism, Black & Grey, Dark Side, and Ornamental tattooing, every piece combines technical mastery with anatomical composition.
                 </p>
-                <div className="flex flex-wrap items-center justify-center gap-6 mt-6 text-xs text-neutral-400 font-mono">
-                  <span className="flex items-center gap-1.5">
-                    <Shield className="w-3.5 h-3.5 text-[#00d2b2]" />
+                <div className="flex flex-wrap items-center justify-center gap-8 mt-8 text-xs sm:text-sm text-neutral-400 font-mono">
+                  <span className="flex items-center gap-2">
+                    <Shield className="w-4 h-4 text-[#00d2b2]" />
                     Tattoo Artist Since 2005
                   </span>
                   <span>·</span>
-                  <span className="flex items-center gap-1.5">
-                    <MapPin className="w-3.5 h-3.5 text-[#00d2b2]" />
+                  <span className="flex items-center gap-2">
+                    <MapPin className="w-4 h-4 text-[#00d2b2]" />
                     London, Ontario, Canada
                   </span>
                 </div>
@@ -155,27 +155,27 @@ export default function App() {
 
         {/* PAGE 3: PORTFOLIO */}
         {currentPage === 'portfolio' && (
-          <div className="pt-28 pb-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+          <div className="pt-36 sm:pt-44 pb-28 sm:pb-36">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16">
               <button
                 onClick={() => {
                   setCurrentPage('home');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="inline-flex items-center gap-2 text-xs font-heading uppercase tracking-widest text-neutral-400 hover:text-[#00d2b2] transition-colors mb-6 cursor-pointer"
+                className="inline-flex items-center gap-2 text-xs font-heading uppercase tracking-widest text-neutral-400 hover:text-[#00d2b2] transition-colors mb-8 cursor-pointer"
               >
                 <ArrowLeft className="w-4 h-4" />
                 <span>Back to Home</span>
               </button>
 
-              <div className="bg-neutral-950 border border-neutral-800 p-8 sm:p-12 text-center relative overflow-hidden shadow-2xl">
+              <div className="bg-neutral-950 border border-neutral-800 p-10 sm:p-16 text-center relative overflow-hidden shadow-2xl">
                 <div className="absolute top-0 left-0 w-64 h-64 bg-[#00d2b2]/5 rounded-full blur-3xl pointer-events-none" />
                 <FiligreeDivider
                   title="AUTHENTIC TATTOO PORTFOLIO"
                   subtitle="Selected Tattoo Artistry by Ralph Con"
-                  className="mb-4"
+                  className="mb-6 sm:mb-8"
                 />
-                <p className="text-sm sm:text-base text-neutral-300 max-w-3xl mx-auto leading-relaxed">
+                <p className="text-base sm:text-lg text-neutral-300 max-w-3xl mx-auto leading-relaxed sm:leading-loose">
                   Browse real, unedited photographs of tattoos completed by Ralph Con. Filter by style or click on any piece to inspect details and request a consultation.
                 </p>
               </div>
@@ -190,26 +190,26 @@ export default function App() {
 
         {/* PAGE 4: CONTACT & BOOKING */}
         {currentPage === 'booking' && (
-          <div className="pt-28 pb-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+          <div className="pt-36 sm:pt-44 pb-28 sm:pb-36">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16">
               <button
                 onClick={() => {
                   setCurrentPage('home');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="inline-flex items-center gap-2 text-xs font-heading uppercase tracking-widest text-neutral-400 hover:text-[#00d2b2] transition-colors mb-6 cursor-pointer"
+                className="inline-flex items-center gap-2 text-xs font-heading uppercase tracking-widest text-neutral-400 hover:text-[#00d2b2] transition-colors mb-8 cursor-pointer"
               >
                 <ArrowLeft className="w-4 h-4" />
                 <span>Back to Home</span>
               </button>
 
-              <div className="bg-neutral-950 border border-neutral-800 p-8 sm:p-12 text-center relative overflow-hidden shadow-2xl">
+              <div className="bg-neutral-950 border border-neutral-800 p-10 sm:p-16 text-center relative overflow-hidden shadow-2xl">
                 <FiligreeDivider
                   title="BOOKING & CONSULTATION"
                   subtitle="Ralph Con Tattoo · London, Ontario, Canada"
-                  className="mb-4"
+                  className="mb-6 sm:mb-8"
                 />
-                <p className="text-sm sm:text-base text-neutral-300 max-w-3xl mx-auto leading-relaxed">
+                <p className="text-base sm:text-lg text-neutral-300 max-w-3xl mx-auto leading-relaxed sm:leading-loose">
                   Ready to start your custom tattoo? Tell us about your idea, preferred placement, size, and resident artist. We will review your inquiry and follow up promptly with next steps.
                 </p>
               </div>

@@ -31,7 +31,7 @@ export default function ArtistsSection({
   };
 
   return (
-    <section id="artists" className="relative py-24 bg-[#080808] text-white overflow-hidden">
+    <section id="artists" className="relative py-28 sm:py-36 bg-[#080808] text-white overflow-hidden">
       
       {/* Background glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-[#00d2b2]/5 blur-3xl pointer-events-none" />
@@ -41,133 +41,129 @@ export default function ArtistsSection({
         <FiligreeDivider
           title="THE ARTIST"
           subtitle="Tattoo Artist Since 2005"
-          className="mb-14"
+          className="mb-16 sm:mb-20"
         />
 
-        {/* Master Artist Profile Card */}
+        {/* Master Artist Profile Card with Generous Editorial Padding */}
         <div className="max-w-4xl mx-auto">
           {ARTISTS.map((artist) => (
             <div
               key={artist.id}
               className="bg-neutral-900/60 border border-neutral-800 hover:border-[#00d2b2]/70 transition-all duration-300 overflow-hidden shadow-2xl"
             >
-              <div className="p-8 sm:p-10 border-b border-neutral-800/80 bg-neutral-950/80 flex flex-col md:flex-row items-center md:items-start gap-6">
+              <div className="p-8 sm:p-12 md:p-14 border-b border-neutral-800/80 bg-neutral-950/80 flex flex-col md:flex-row items-center md:items-start gap-8 sm:gap-10">
                 
                 {/* Artist Avatar Logo */}
-                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 border-[#00d2b2] p-1 bg-black shrink-0 shadow-[0_0_20px_rgba(0,210,178,0.3)]">
+                <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-2 border-[#00d2b2] p-1 bg-black shrink-0 shadow-[0_0_20px_rgba(0,210,178,0.3)]">
                   <img
                     src={artist.avatar}
                     alt={artist.name}
-                    className="w-full h-full object-cover filter contrast-110 rounded-full"
+                    className="w-full h-full object-cover rounded-full"
                     referrerPolicy="no-referrer"
                   />
                 </div>
 
-                {/* Artist Bio & Metadata */}
-                <div className="flex-1 text-center md:text-left space-y-3">
-                  <div className="flex flex-col sm:flex-row items-center md:items-start justify-between gap-2">
-                    <div>
-                      <div className="flex items-center justify-center md:justify-start gap-2">
-                        <h3 className="font-heading font-bold text-2xl sm:text-3xl uppercase tracking-wider text-white">
-                          {artist.name}
-                        </h3>
-                        <span title="Master Artist Since 2005">
-                          <CheckCircle2 className="w-5 h-5 text-[#00d2b2] shrink-0" />
-                        </span>
-                      </div>
-                      <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 text-xs text-[#00d2b2] mt-1 font-mono">
-                        <a
-                          href={artist.instagram}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:text-[#00e8c4] transition-colors inline-flex items-center gap-1"
-                        >
-                          <Instagram className="w-3.5 h-3.5" />
-                          <span>{artist.handle}</span>
-                          <ExternalLink className="w-3 h-3 opacity-70" />
-                        </a>
-                        {artist.threads && (
-                          <a
-                            href={artist.threads}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-[#00e8c4] transition-colors inline-flex items-center gap-1"
-                          >
-                            <AtSign className="w-3.5 h-3.5" />
-                            <span>Threads</span>
-                          </a>
-                        )}
-                      </div>
-                    </div>
-
-                    <span className="inline-block text-xs uppercase tracking-wider font-heading font-semibold text-[#00d2b2] bg-neutral-900 px-3 py-1.5 border border-neutral-800">
-                      Tattoo Artist Since 2005
+                {/* Artist Bio & Credentials */}
+                <div className="flex-1 text-center md:text-left space-y-4">
+                  <div>
+                    <span className="text-xs uppercase tracking-widest text-[#00d2b2] font-heading font-semibold block">
+                      Master Tattoo Artist
                     </span>
+                    <h3 className="font-heading text-3xl sm:text-4xl font-bold uppercase tracking-wider text-white mt-1">
+                      {artist.name}
+                    </h3>
+                    <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-xs text-neutral-400 font-mono mt-2">
+                      <a
+                        href={artist.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#00d2b2] hover:underline flex items-center gap-1"
+                      >
+                        <AtSign className="w-3.5 h-3.5" />
+                        <span>ralcontattoo</span>
+                      </a>
+                      <span>·</span>
+                      <span>London, Ontario, Canada</span>
+                      <span>·</span>
+                      <span>Since 2005</span>
+                    </div>
                   </div>
 
-                  <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-normal pt-2">
+                  <p className="text-neutral-300 text-sm sm:text-base leading-relaxed sm:leading-loose max-w-2xl font-normal pt-1">
                     {artist.bio}
                   </p>
 
-                  <div className="pt-2 flex flex-wrap gap-2 justify-center md:justify-start">
-                    <span className="text-xs bg-neutral-900 text-neutral-300 px-2.5 py-1 border border-neutral-800 font-heading uppercase tracking-wider">
-                      Realism
+                  <div className="pt-3">
+                    <span className="text-[11px] uppercase tracking-widest text-neutral-400 font-heading block mb-2 font-semibold">
+                      Master Specialties:
                     </span>
-                    <span className="text-xs bg-neutral-900 text-neutral-300 px-2.5 py-1 border border-neutral-800 font-heading uppercase tracking-wider">
-                      Black & Grey
-                    </span>
-                    <span className="text-xs bg-neutral-900 text-neutral-300 px-2.5 py-1 border border-neutral-800 font-heading uppercase tracking-wider">
-                      Dark Side
-                    </span>
-                    <span className="text-xs bg-neutral-900 text-neutral-300 px-2.5 py-1 border border-neutral-800 font-heading uppercase tracking-wider">
-                      Ornamental
-                    </span>
+                    <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
+                      {['Realism', 'Black & Grey', 'Dark Side', 'Ornamental'].map((spec) => (
+                        <span
+                          key={spec}
+                          className="px-3.5 py-1.5 bg-neutral-900 border border-neutral-700/80 text-neutral-200 text-xs font-mono"
+                        >
+                          {spec}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Booking CTA */}
+                  <div className="pt-6 flex flex-col sm:flex-row items-center gap-4">
+                    <button
+                      onClick={() => onSelectArtistForBooking && onSelectArtistForBooking(artist.handle)}
+                      className="w-full sm:w-auto px-8 py-3.5 bg-[#00d2b2] hover:bg-[#00e8c4] text-neutral-950 font-heading font-bold text-xs uppercase tracking-widest transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
+                    >
+                      <Calendar className="w-4 h-4" />
+                      <span>Book With {artist.name}</span>
+                    </button>
+                    <a
+                      href={artist.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full sm:w-auto px-6 py-3.5 bg-neutral-900 hover:bg-neutral-800 text-neutral-300 hover:text-white font-heading font-medium text-xs uppercase tracking-widest border border-neutral-700 transition-colors inline-flex items-center justify-center gap-2"
+                    >
+                      <Instagram className="w-4 h-4 text-[#00d2b2]" />
+                      <span>Instagram Gallery</span>
+                      <ExternalLink className="w-3 h-3 text-neutral-500" />
+                    </a>
                   </div>
                 </div>
 
               </div>
 
-              {/* Featured Works Grid */}
-              <div className="p-6 sm:p-8 bg-neutral-950/40">
-                <span className="text-xs font-heading uppercase tracking-widest text-neutral-400 block mb-4 font-semibold text-center md:text-left">
-                  Featured Portfolio Highlights
-                </span>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                  {artist.featuredWorks.map((workImg, idx) => (
-                    <div
-                      key={idx}
-                      onClick={() => handlePieceClick(workImg, artist)}
-                      className="aspect-square bg-neutral-950 overflow-hidden border border-neutral-800 hover:border-[#00d2b2] cursor-pointer group/thumb shadow-md"
-                      title="Click to inspect artwork"
-                    >
-                      <img
-                        src={workImg}
-                        alt={`${artist.name} artwork sample ${idx + 1}`}
-                        className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300 filter contrast-105"
-                        referrerPolicy="no-referrer"
-                      />
-                    </div>
-                  ))}
+              {/* Featured Pieces Showcase Strip with Balanced Margins */}
+              <div className="p-6 sm:p-8 bg-neutral-950">
+                <div className="flex items-center justify-between mb-5">
+                  <span className="text-xs font-heading uppercase tracking-widest text-neutral-400 font-semibold">
+                    Featured Master Works
+                  </span>
+                  <span className="text-xs text-neutral-500 font-mono">
+                    Click piece to inspect
+                  </span>
                 </div>
 
-                {/* Card Actions */}
-                <div className="mt-8 flex flex-col sm:flex-row items-center justify-end gap-3">
-                  <a
-                    href={artist.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto py-3 px-6 bg-neutral-900 hover:bg-neutral-800 text-neutral-200 hover:text-white text-xs font-heading uppercase tracking-wider text-center border border-neutral-800 transition-colors flex items-center justify-center gap-2"
-                  >
-                    <Instagram className="w-4 h-4 text-[#00d2b2]" />
-                    <span>Follow @ralcontattoo</span>
-                  </a>
-                  <button
-                    onClick={() => onSelectArtistForBooking && onSelectArtistForBooking(artist.handle)}
-                    className="w-full sm:w-auto py-3 px-6 bg-[#00d2b2] hover:bg-[#00e8c4] text-neutral-950 text-xs font-heading font-bold uppercase tracking-wider text-center transition-colors flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(0,210,178,0.3)] cursor-pointer"
-                  >
-                    <Calendar className="w-4 h-4" />
-                    <span>Book Session With Ralph Con</span>
-                  </button>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5">
+                  {artist.featuredWorks.map((work, idx) => (
+                    <div
+                      key={idx}
+                      onClick={() => handlePieceClick(work, artist)}
+                      className="aspect-square bg-neutral-900 border border-neutral-800 hover:border-[#00d2b2] transition-colors overflow-hidden group cursor-pointer relative shadow-md"
+                    >
+                      <img
+                        src={work}
+                        alt={`Work by ${artist.name}`}
+                        className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500 filter contrast-105"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span className="text-[10px] font-heading uppercase tracking-wider text-white bg-black/80 px-2.5 py-1 border border-neutral-700">
+                          Inspect
+                        </span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
 

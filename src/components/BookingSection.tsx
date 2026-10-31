@@ -68,29 +68,29 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
   };
 
   return (
-    <section id="booking" className="relative py-24 bg-[#080808] text-white overflow-hidden border-t border-neutral-900">
+    <section id="booking" className="relative py-28 sm:py-36 bg-[#080808] text-white overflow-hidden border-t border-neutral-900">
       
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[700px] bg-[#00d2b2]/5 blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Heading */}
+        {/* Section Heading with Generous Breathing Room */}
         <FiligreeDivider
           title="START YOUR CONSULTATION"
           subtitle="Ralph Con · Tattoo Artist Since 2005"
-          className="mb-14"
+          className="mb-16 sm:mb-20"
         />
 
-        {/* Dual-Card Split Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch max-w-6xl mx-auto">
+        {/* Dual-Card Split Layout with Generous Gap */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-stretch max-w-6xl mx-auto">
           
           {/* Left Card: Info Card with Studio Credentials & Contact */}
-          <div className="lg:col-span-5 bg-neutral-950 border-2 border-neutral-800 p-6 sm:p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+          <div className="lg:col-span-5 bg-neutral-950 border-2 border-neutral-800 p-8 sm:p-10 md:p-12 flex flex-col justify-between shadow-2xl relative overflow-hidden">
             
             {/* Top Filigree Crown */}
             <div>
-              <div className="flex items-center justify-center gap-2 mb-4 opacity-80">
+              <div className="flex items-center justify-center gap-2 mb-6 opacity-80">
                 <div className="h-[1px] w-12 bg-[#00d2b2]" />
                 <span className="w-1.5 h-1.5 rotate-45 bg-[#00d2b2]" />
                 <div className="h-[1px] w-12 bg-[#00d2b2]" />
@@ -100,12 +100,12 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
                 BOOK YOUR SESSION
               </h3>
 
-              <p className="text-xs sm:text-sm text-neutral-300 text-center mt-3 leading-relaxed font-normal">
+              <p className="text-xs sm:text-sm text-neutral-300 text-center mt-4 leading-relaxed sm:leading-loose font-normal">
                 Please fill out the form with your tattoo concept details. Ralph Con will review your design idea, placement, and reference photos to prepare your custom session.
               </p>
 
-              {/* Key Contact Details */}
-              <div className="my-8 space-y-5 border-t border-b border-neutral-800/80 py-6">
+              {/* Key Contact Details with Roomy Spacing */}
+              <div className="my-8 sm:my-10 space-y-6 border-t border-b border-neutral-800/80 py-8">
                 
                 {/* Location */}
                 <div className="flex items-start gap-3.5">
@@ -216,20 +216,20 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
 
           </div>
 
-          {/* Right Card: Form Card */}
-          <div className="lg:col-span-7 bg-white text-neutral-900 p-6 sm:p-10 shadow-2xl flex flex-col justify-between">
+          {/* Right Card: Form Card with Generous Editorial Padding */}
+          <div className="lg:col-span-7 bg-white text-neutral-900 p-8 sm:p-12 md:p-14 shadow-2xl flex flex-col justify-between">
             {submitStatus === 'success' ? (
-              <div className="py-12 flex flex-col items-center text-center space-y-4">
+              <div className="py-14 sm:py-16 flex flex-col items-center text-center space-y-6">
                 <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
-                <h4 className="font-heading text-2xl font-bold uppercase tracking-wider text-neutral-900">
+                <h4 className="font-heading text-2xl sm:text-3xl font-bold uppercase tracking-wider text-neutral-900">
                   Consultation Request Received
                 </h4>
-                <p className="text-neutral-600 max-w-md text-sm leading-relaxed">
+                <p className="text-neutral-600 max-w-md text-sm sm:text-base leading-relaxed sm:leading-loose">
                   Thank you, <strong>{formData.fullName}</strong>. Your custom tattoo inquiry has been sent to Ralph Con. He will review your concept and reach out at <strong>{formData.email}</strong> to discuss scheduling and session details.
                 </p>
-                <div className="pt-4">
+                <div className="pt-6">
                   <button
                     onClick={() => {
                       setSubmitStatus('idle');
@@ -247,26 +247,26 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
                       });
                       setUploadedFiles([]);
                     }}
-                    className="px-6 py-2.5 bg-neutral-900 text-white text-xs font-heading uppercase tracking-wider hover:bg-neutral-800 transition-colors cursor-pointer"
+                    className="px-8 py-3.5 bg-neutral-900 text-white text-xs font-heading uppercase tracking-widest hover:bg-neutral-800 transition-colors cursor-pointer"
                   >
                     Submit Another Request
                   </button>
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
                 
                 {submitStatus === 'error' && (
-                  <div className="p-3 bg-red-50 border border-red-200 text-red-700 text-xs flex items-center gap-2">
+                  <div className="p-4 bg-red-50 border border-red-200 text-red-700 text-xs sm:text-sm flex items-center gap-2.5">
                     <AlertCircle className="w-4 h-4 shrink-0" />
                     <span>Please provide your Full Name, Email Address, and Tattoo Description to submit.</span>
                   </div>
                 )}
 
                 {/* Row 1: Full Name & Email Address */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-xs font-heading uppercase tracking-wider font-bold text-neutral-800 mb-1">
+                    <label className="block text-xs font-heading uppercase tracking-wider font-bold text-neutral-800 mb-2">
                       Full Name *
                     </label>
                     <input
@@ -276,11 +276,11 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
                       placeholder="Enter your full name"
                       value={formData.fullName}
                       onChange={handleInputChange}
-                      className="w-full px-3.5 py-2.5 bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm focus:outline-none focus:border-[#00a88f] focus:bg-white transition-all placeholder:text-neutral-400"
+                      className="w-full px-4 py-3 bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm focus:outline-none focus:border-[#00a88f] focus:bg-white transition-all placeholder:text-neutral-400"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-heading uppercase tracking-wider font-bold text-neutral-800 mb-1">
+                    <label className="block text-xs font-heading uppercase tracking-wider font-bold text-neutral-800 mb-2">
                       Email Address *
                     </label>
                     <input
@@ -290,7 +290,7 @@ export default function BookingSection({ preselectedArtist }: BookingSectionProp
                       placeholder="your@email.com"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-3.5 py-2.5 bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm focus:outline-none focus:border-[#00a88f] focus:bg-white transition-all placeholder:text-neutral-400"
+                      className="w-full px-4 py-3 bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm focus:outline-none focus:border-[#00a88f] focus:bg-white transition-all placeholder:text-neutral-400"
                     />
                   </div>
                 </div>

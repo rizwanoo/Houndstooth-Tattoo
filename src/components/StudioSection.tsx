@@ -5,18 +5,18 @@ import { MapPin, ShieldCheck, Sparkles, Clock, Compass, ExternalLink } from 'luc
 
 export default function StudioSection() {
   return (
-    <section className="relative py-24 bg-[#0a0a0a] text-white overflow-hidden border-t border-neutral-900">
+    <section className="relative py-28 sm:py-36 bg-[#0a0a0a] text-white overflow-hidden border-t border-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <FiligreeDivider
           title="THE STUDIO"
           subtitle="London, Ontario · Tattoo Artist Since 2005"
-          className="mb-14"
+          className="mb-16 sm:mb-20"
         />
 
-        {/* Studio Photo Showcase */}
-        <div className="relative shadow-2xl border border-neutral-800 bg-neutral-950 overflow-hidden mb-12 group">
-          <div className="aspect-[16/9] sm:aspect-[21/9] w-full max-h-[500px] overflow-hidden">
+        {/* Studio Photo Showcase with Generous Framing */}
+        <div className="relative shadow-2xl border border-neutral-800 bg-neutral-950 overflow-hidden mb-16 sm:mb-20 group">
+          <div className="aspect-[16/9] sm:aspect-[21/9] w-full max-h-[520px] overflow-hidden">
             <img
               src={STUDIO_INFO.interiorPhoto}
               alt="Ralph Con Studio London Ontario"
@@ -25,27 +25,27 @@ export default function StudioSection() {
             />
           </div>
           
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent pointer-events-none" />
 
-          {/* Bottom Banner inside Image */}
-          <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-8 right-4 sm:right-8 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
+          {/* Bottom Banner inside Image with Spacious Padding */}
+          <div className="absolute bottom-6 sm:bottom-8 left-6 sm:left-10 right-6 sm:right-10 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
             <div>
               <span className="text-xs uppercase tracking-widest text-[#00d2b2] font-heading font-semibold block">
                 Official Studio Space
               </span>
-              <h3 className="font-heading text-xl sm:text-2xl font-bold uppercase tracking-wider text-white">
+              <h3 className="font-heading text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wider text-white mt-1">
                 Ralph Con Tattoo · London, Ontario, Canada
               </h3>
-              <p className="text-xs text-neutral-300 max-w-lg mt-1 hidden sm:block">
+              <p className="text-xs sm:text-sm text-neutral-300 max-w-xl mt-2 hidden sm:block leading-relaxed">
                 Dedicated private space designed for focused custom artistry, sterile preparation, and high-end client comfort.
               </p>
             </div>
 
             <a
-              href={STUDIO_INFO.mapsUrl}
+              href="https://maps.google.com/?q=London+Ontario+Canada"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-neutral-900/90 hover:bg-[#00d2b2] hover:text-neutral-950 text-white text-xs font-heading uppercase tracking-wider border border-neutral-700 hover:border-[#00d2b2] transition-colors inline-flex items-center gap-1.5 shrink-0"
+              className="px-5 py-2.5 bg-neutral-900/90 hover:bg-[#00d2b2] hover:text-neutral-950 text-white border border-neutral-700 text-xs font-heading font-semibold uppercase tracking-wider transition-colors inline-flex items-center gap-1.5 shrink-0"
             >
               <Compass className="w-3.5 h-3.5" />
               <span>London, ON Map</span>
@@ -54,55 +54,45 @@ export default function StudioSection() {
           </div>
         </div>
 
-        {/* Studio Protocol Pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="p-6 bg-neutral-900/40 border border-neutral-800 space-y-2">
-            <div className="w-9 h-9 border border-[#00d2b2]/40 text-[#00d2b2] flex items-center justify-center mb-3">
-              <ShieldCheck className="w-5 h-5" />
+        {/* 3 Studio Highlights with Generous Grid Spacing */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
+          
+          <div className="p-8 sm:p-10 bg-neutral-950/80 border border-neutral-800/80 hover:border-[#00d2b2]/50 transition-all duration-300">
+            <div className="w-12 h-12 bg-neutral-900 border border-neutral-800 flex items-center justify-center text-[#00d2b2] mb-6">
+              <ShieldCheck className="w-6 h-6" />
             </div>
-            <h4 className="font-heading text-base font-bold uppercase tracking-wider text-white">
-              Hospital-Grade Hygiene
+            <h4 className="font-heading text-lg sm:text-xl font-bold uppercase tracking-wider text-white mb-3">
+              Sterile Standards
             </h4>
-            <p className="text-xs text-neutral-400 leading-relaxed">
-              Medical-grade autoclave sterilization, barrier-wrapped equipment, and 100% disposable single-use needle cartridges.
+            <p className="text-neutral-300 text-sm sm:text-base leading-relaxed sm:leading-loose">
+              Hospital-grade autoclave sterilization, 100% single-use medical needles, and top-tier clinical sanitation protocols for every single session.
             </p>
           </div>
 
-          <div className="p-6 bg-neutral-900/40 border border-neutral-800 space-y-2">
-            <div className="w-9 h-9 border border-[#00d2b2]/40 text-[#00d2b2] flex items-center justify-center mb-3">
-              <Sparkles className="w-5 h-5" />
+          <div className="p-8 sm:p-10 bg-neutral-950/80 border border-neutral-800/80 hover:border-[#00d2b2]/50 transition-all duration-300">
+            <div className="w-12 h-12 bg-neutral-900 border border-neutral-800 flex items-center justify-center text-[#00d2b2] mb-6">
+              <Sparkles className="w-6 h-6" />
             </div>
-            <h4 className="font-heading text-base font-bold uppercase tracking-wider text-white">
-              Bespoke Custom Art
+            <h4 className="font-heading text-lg sm:text-xl font-bold uppercase tracking-wider text-white mb-3">
+              Private Custom Atelier
             </h4>
-            <p className="text-xs text-neutral-400 leading-relaxed">
-              Every design is custom created for the individual client, specializing in Realism, Black & Grey, Dark Side, and Ornamental flow.
+            <p className="text-neutral-300 text-sm sm:text-base leading-relaxed sm:leading-loose">
+              By appointment only. You receive dedicated, undivided attention from Ralph Con with zero distractions in an inspiring private studio environment.
             </p>
           </div>
 
-          <div className="p-6 bg-neutral-900/40 border border-neutral-800 space-y-2">
-            <div className="w-9 h-9 border border-[#00d2b2]/40 text-[#00d2b2] flex items-center justify-center mb-3">
-              <Clock className="w-5 h-5" />
+          <div className="p-8 sm:p-10 bg-neutral-950/80 border border-neutral-800/80 hover:border-[#00d2b2]/50 transition-all duration-300">
+            <div className="w-12 h-12 bg-neutral-900 border border-neutral-800 flex items-center justify-center text-[#00d2b2] mb-6">
+              <Clock className="w-6 h-6" />
             </div>
-            <h4 className="font-heading text-base font-bold uppercase tracking-wider text-white">
-              Artist Since 2005
+            <h4 className="font-heading text-lg sm:text-xl font-bold uppercase tracking-wider text-white mb-3">
+              20+ Years Mastery
             </h4>
-            <p className="text-xs text-neutral-400 leading-relaxed">
-              Over two decades of professional experience delivering precise linework, smooth shading, and long-lasting body art.
+            <p className="text-neutral-300 text-sm sm:text-base leading-relaxed sm:leading-loose">
+              Tattooing continuously since 2005. Decades of refined hand technique, needle depth control, and specialized pigment saturation knowledge.
             </p>
           </div>
 
-          <div className="p-6 bg-neutral-900/40 border border-neutral-800 space-y-2">
-            <div className="w-9 h-9 border border-[#00d2b2]/40 text-[#00d2b2] flex items-center justify-center mb-3">
-              <MapPin className="w-5 h-5" />
-            </div>
-            <h4 className="font-heading text-base font-bold uppercase tracking-wider text-white">
-              London, Ontario
-            </h4>
-            <p className="text-xs text-neutral-400 leading-relaxed">
-              Convenient private studio setting in London, Ontario. Sessions arranged by appointment and advance consultation.
-            </p>
-          </div>
         </div>
 
       </div>
